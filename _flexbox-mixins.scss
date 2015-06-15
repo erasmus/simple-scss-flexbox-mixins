@@ -1,0 +1,79 @@
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin align-items($v) {
+  -webkit-align-items:  $v;
+  align-items:          $v;
+}
+
+// flex is shorthand declaration
+  // flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+@mixin flex($v) {
+  -webkit-box-flex: $v;
+  -moz-box-flex:    $v;
+  -webkit-flex:     $v;
+  -ms-flex:         $v;
+  flex:             $v;
+}
+
+@mixin flex-basis($v) {
+  -webkit-flex-basis:   $v;
+  flex-basis:           $v;
+}
+
+@mixin flex-direction($v) {
+  -webkit-flex-direction:   $v;
+  flex-direction:           $v;
+}
+
+@mixin flex-flow($v) {
+  -webkit-flex-flow:    $v;
+  flex-flow:            $v;
+}
+
+@mixin flex-grow($v) {
+  -webkit-flex-grow:    $v;
+  flex-grow:            $v;
+}
+
+@mixin flex-shrink($v) {
+  -webkit-flex-shrink:    $v;
+  flex-shrink:            $v;
+}
+
+@mixin flex-wrap($v) {
+  -webkit-flex-wrap:    $v;
+  flex-wrap:            $v;
+}
+
+@mixin justify-content($v) {
+  -webkit-justify-content: $v;
+  justify-content: $v;
+}
+
+// ==== Children element flexbox styles ====//
+
+// Order in which they collapse
+@mixin order($v) {
+  -webkit-box-ordinal-group:  $v;
+  -moz-box-ordinal-group:     $v;
+  -ms-flex-order:             $v;
+  -webkit-order:              $v;
+  order:                      $v;
+}
+
+// Override parent alignment
+@mixin align-self($v) {
+  -webkit-align-self:  $v;
+  align-self:          $v;
+}
+
+// Align item to the right
+@mixin flex-right {
+  margin-left: auto;
+}
